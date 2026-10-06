@@ -1,24 +1,10 @@
-# Backend
 backend/target/
-*.jar
-*.class
-
-# Frontend
 frontend/node_modules/
 frontend/dist/
-
-# IDE
 .idea/
 .vscode/
 *.iml
-
-# Environment
 .env
-.env.local
-
-# OS
+*.log
 .DS_Store
 Thumbs.db
-
-# Logs
-*.log
