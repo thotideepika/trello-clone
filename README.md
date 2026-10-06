@@ -1,4 +1,7 @@
 # 🚀 Trello Clone — Full-Stack Project Management Tool
+> 🔗 **Repository:** [github.com/thotideepika/trello-clone](https://github.com/thotideepika/trello-clone)  
+> 🌐 **Live Demo:** [trello-clone.vercel.app](https://trello-clone.vercel.app)
+
 
 A production-grade **Trello clone** with real-time collaboration, built using **Spring Boot 3**, **React + TypeScript**, **PostgreSQL**, and **WebSockets**.
 
