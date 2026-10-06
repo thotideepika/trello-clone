@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:16
+    container_name: trello-db
+    environment:
+      POSTGRES_DB: trello
+      POSTGRES_USER: trello
+      POSTGRES_PASSWORD: trello123
+    ports:
+      - "5432:5432"
+    volumes:
+      - trello_data:/var/lib/postgresql/data
+
+  backend:
+    build: ./backend
+    container_name: trello-backend
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/trello
+      SPRING_DATASOURCE_USERNAME: trello
+      SPRING_DATASOURCE_PASSWORD: trello123
+    depends_on:
+      - postgres
+
+  frontend:
+    build: ./frontend
+    container_name: trello-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  trello_data:
